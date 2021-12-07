@@ -6,9 +6,9 @@
 
   <groupId>com.mindtree</groupId>
   <artifactId>simplemaven</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.2-SNAPSHOT</version>
 
-  <name>simplecalculator</name>
+  <name>simplemaven</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
