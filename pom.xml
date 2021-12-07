@@ -10,6 +10,12 @@
   <name>my-app</name>
   <url>http://maven.apache.org</url>
 	
+<properties>
+ <sonar.projectKey>rajiv619_simple-java-maven-app</sonar.projectKey>
+  <sonar.organization>rajiv619</sonar.organization>
+  <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+</properties>
+	
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
