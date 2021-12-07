@@ -1,7 +1,7 @@
 pipeline{
   agent {
     docker {
-      image 'maven:3-alpine'
+      image 'maven:3.6.3-jdk-11'
       args '-v /root/.m2:/root/.m2'
     }
   }
@@ -25,6 +25,7 @@ pipeline{
             agent any
             steps {
               withSonarQubeEnv('simplemaven') {
+		      
                  sh 'java -version'
                  sh 'mvn clean package sonar:sonar'
               }
