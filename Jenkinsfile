@@ -36,21 +36,4 @@ pipeline{
             }
         }
    }
- stage('Deploy to artifactory'){
-        steps{
-        rtUpload(
-         serverId : 'Art-server',
-         spec :'''{
-           "files" :[
-           {
-           "pattern":"target/*.jar",
-           "target":"Art-simplemaven-2021"
-           }
-           ]
-         }''',
-         
-      )
-      }
-     }
-
 }
