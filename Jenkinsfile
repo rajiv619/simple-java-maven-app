@@ -17,7 +17,7 @@ pipeline{
       }
       }
   }
-  tage("Build & SonarQube analysis") {
+  stage("Build & SonarQube analysis") {
             agent any
             steps {
               withSonarQubeEnv('simplemaven') {
@@ -32,23 +32,7 @@ pipeline{
             }
         }
    
-     stage('Deploy to artifactory'){
-        steps{
-        rtUpload(
-         serverId : 'Art-server',
-         spec :'''{
-           "files" :[
-           {
-           "pattern":"target/*.jar",
-           "target":"Art-simplemaven-2021"
-           }
-           ]
-         }''',
-         
-      )
-      }
-     }
-	 
+    	 
 	 post {  
          always {  
              echo 'This will always run'  
